@@ -17,8 +17,7 @@ resource "aws_flow_log" "vpc_flow_log" {
       Name = "rm-${var.domain}-flow-log"
     }
   )
+
+  depends_on = [module.flow_log_bucket]
 }
 
-#  tags = merge(var.default_tags, {
-#   Name        = var.vpc_name
-#   })
