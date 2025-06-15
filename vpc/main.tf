@@ -17,7 +17,5 @@ resource "aws_flow_log" "vpc_flow_log" {
       Name = "rm-${var.domain}-flow-log"
     }
   )
-
-  depends_on = [module.flow_log_bucket]
 }
 
